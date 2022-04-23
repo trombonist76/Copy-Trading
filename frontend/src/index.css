@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@1,800&family=Sora:wght@600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Sora', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2b2d42 ;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+}
+
+label{
+  color:#fff !important
+}

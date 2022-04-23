@@ -1,0 +1,137 @@
+:root {
+    --main-bg-color: brown;
+    --setup-content-text-color:#3a86ff
+  }
+
+.active{
+    border-bottom: 8px solid #fb8500;
+}
+
+.success{
+    border-bottom: 8px solid #b5e48c;
+}
+
+.fail{
+    border-bottom: 8px solid #e63946;
+}
+
+
+.setup{
+    background: #fff;
+    width: 320px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-left: 50px;
+    
+}
+
+.chart{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    transition: all 2s;
+    
+}
+
+
+.wrapper{
+    height: 100%;
+    border-radius: 10px;
+    font-family: 'Sora', sans-serif !important;
+    padding: 30px;
+
+}
+
+.trader{
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.trader div:first-child::before{
+    content: "Trader ";
+    color: var(--setup-content-text-color)  ;
+    font-size: 1em;
+}
+
+.trader div:last-child::before{
+    content: "Win Rate ";
+    color: var(--setup-content-text-color)  ;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.trader div:last-child::after{
+    content: "%";
+}
+
+
+
+.title{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: bolder;
+
+}
+
+.side{
+    font-size: 1em;
+}
+
+.side::before{
+    content: "Position Side ";
+    color: var(--setup-content-text-color)  ;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+.riskRewardRatio{
+    font-size: 1em;
+}
+
+.riskRewardRatio::before{
+    content: "Risk Reward Ratio ";
+    color: var(--setup-content-text-color)  ;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+.riskRewardRatio::after{
+    content: "R";
+}
+
+.subContentWrapper{
+    min-height: 100px;
+}
+
+.subContent{
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.subContent::before{
+    color: var(--setup-content-text-color)  ;
+    content: attr(data-level) " ";
+    font-weight: bold;
+    font-size: 1em;
+}
+.stopLossPrice{
+    font-size: 1em;
+}
+
+
+.buttons{
+    padding-top:30px;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 0;
+}
+
