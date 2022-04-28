@@ -1,6 +1,6 @@
 [ -z "$CONTRACT" ] && echo "Missing \$CONTRACT environment variable"
-[ -z "$TRADER_ACCOUNT" ] && echo "Missing \$CONTRACT environment variable"
-[ -z "$CUSTOMER_ACCOUNT" ] && echo "Missing \$CONTRACT environment variable"
+[ -z "$TRADER_ACCOUNT" ] && echo "Missing \$TRADER_ACCOUNT environment variable"
+[ -z "$CUSTOMER_ACCOUNT" ] && echo "Missing \$CUSTOMER_ACCOUNT environment variable"
 
 # You must login at least 2 testnet accounts to try smart contrat functions with near login
 
