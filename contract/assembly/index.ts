@@ -1,7 +1,8 @@
 import { TradeSetup, EditableSetup, Trader} from "./model";
+import { context} from "near-sdk-as";
 
-export function createSetup(traderAccId:string, pair:string, chart:string, side: string, entryPrice:string, stopLossPrice:string, takeProfitPrice:string, riskRewardRatio:string): TradeSetup { /**/
-  const trader = Trader.getByAccId(traderAccId)
+export function createSetup(pair:string, chart:string, side: string, entryPrice:string, stopLossPrice:string, takeProfitPrice:string, riskRewardRatio:string): TradeSetup { /**/
+  const trader = Trader.getByAccId(context.sender)
   return TradeSetup.insert(trader, pair, chart, side, entryPrice, stopLossPrice, takeProfitPrice, riskRewardRatio);
 }
 

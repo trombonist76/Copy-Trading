@@ -13,7 +13,6 @@ const CreateTradeSetup = () => {
     : (values.entryPrice - values.takeProfitPrice) / (values.stopLossPrice - values.entryPrice)
 
     await contract.createSetup({
-      traderAccId: currentUser.accountId,
       pair: values.pair,
       chart: values.chart,
       side: values.side,
