@@ -43,11 +43,87 @@ After completing these steps, paste the copied code into the following field in 
 
 ## **Copy-Trade Smart Contract**
 
-### **1. Assembly Directory**
+### **1. Scripts Directory**
+<br>
+
+#### **A. Setting up your terminal**
+The scripts in this folder are designed to help you demonstrate the behavior of the contract(s) in this project.
+
+It uses the following setup:
+
+#### **set your terminal up to have 2 windows, A and B like this:**
+┌─────────────────────────────────┬─────────────────────────────────┐
+│                                 │                                 │
+│                                 │                                 │
+│                A                │                B                │
+│                                 │                                 │
+│                                 │                                 │
+└─────────────────────────────────┴─────────────────────────────────┘
+Terminal A
+This window is used to compile, deploy and control the contract
+
+### **B. Environment**
+
+`export CONTRACT=        #depends on deployment `<br>
+`export TRADER_ACCOUNT=  #any account you control` <br>
+`export CUSTOMER_ACCOUNT= #another account you control`
+
+#### For example:
+`export CONTRACT=dev-1615190770786-2702449` <br>
+`export TRADER_ACCOUNT=alice.testnet` <br>
+`export CUSTOMER_ACCOUNT=bob.testnet` <br>
+
+### **C. Commands**
+
+Helper scripts
+
+1.deploy.sh                    #helper: build and deploy contracts <br>
+2.interact.sh                  #helper: call methods on ContractPromise <br>
+
+Usage  
+
+After deploying the contract, set the environment variables
+You need to set it as shown above. **(B. Environment)**
+
+1- `cd contract`
+
+2- `./scripts/deploy.sh`
+
+3- `./scripts/interact.sh`
+
+### **D.Terminal B**
+This window is used to render the contract account storage
+
+#### **Environment**
+
+`export CONTRACT= #depends on deployment`
+
+For example
+
+`export CONTRACT=dev-1615190770786-2702449` 
+
+Commands
+
+monitor contract storage using near-account-utils
+
+https://github.com/near-examples/near-account-utils
+
+watch -d -n 1 yarn storage $CONTRACT
+OS Support
+Linux
+The watch command is supported natively on Linux
+To learn more about any of these shell commands take a look at explainshell.com
+MacOS
+Consider brew info visionmedia-watch (or brew install watch)
+Windows
+Consider this article: What is the Windows analog of the Linux watch command?
+
+
+### **2. Assembly Directory**
 #### In this folder, there are smart contract codes developed by the project using assemblyscript and the near-sdk package provided by Near protocol.
 <br>
 
-### **2. model.ts**
+### **3. model.ts**
 #### In this file, there are various model classes of the Copy-Trade project such as 'Trader', 'Trade Setup'. These codes, which constitute the main idea of ​​the project, are then presented to the users with the frontend with which the users will interact.
 
 `export const setups = new PersistentUnorderedMap<u32, TradeSetup>("s")` <br>
@@ -270,7 +346,7 @@ export class TradeSetup {
 
  <br>
 
- ## **3. index.ts**
+ ## **4. index.ts**
 ### It allows us to make blockchain calls on near with the function names specified in the various file, by arranging it so that the users we write in the model.ts file can use here. In this project, users can use these codes by interacting with the frontend.
 
 <br>
