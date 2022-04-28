@@ -52,6 +52,7 @@ The scripts in this folder are designed to help you demonstrate the behavior of 
 It uses the following setup:
 
 #### **set your terminal up to have 2 windows, A and B like this:**
+```
 ┌─────────────────────────────────┬─────────────────────────────────┐
 │                                 │                                 │
 │                                 │                                 │
@@ -59,6 +60,7 @@ It uses the following setup:
 │                                 │                                 │
 │                                 │                                 │
 └─────────────────────────────────┴─────────────────────────────────┘
+```
 Terminal A
 This window is used to compile, deploy and control the contract
 
